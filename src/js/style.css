@@ -4,7 +4,15 @@
 /* Extension specific */
 
 .__better_github_pr {
-    display: none;
+    /*
+    font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 83%;
+    color: #24292e;
+    */
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+    font-size: 90%;
+    color: #24292e;
+    overflow: hidden;
 }
 
 ._better_github_pr_resizer {
@@ -48,7 +56,8 @@
 }
 
 .__better_github_pr .file-container > div {
-    width: fit-content;
+    min-width: fit-content;
+    width: 100%;
 }
 
 .__better_github_pr .close-button {
@@ -63,6 +72,12 @@
     position: relative;
     padding: 10px 0;
     width: 100%;
+}
+
+.icon {
+    width: 17px;
+    padding-right: 2px;
+    color: rgba(3,47,98,.55);
 }
 
 .__better_github_pr .actions-filter {
@@ -136,6 +151,8 @@
 .tree-view_item {
     position: relative;
     padding-left: 37px;
+    padding-top: 2px;
+    padding-bottom: 2px;
     transition: background-color .1s;
 }
 
@@ -151,7 +168,7 @@
 }
 
 .tree-view_arrow:before {
-    content: url("data:image/svg+xml;uff8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' viewBox='0 0 100 125' enable-background='new 0 0 100 100' xml:space='preserve'><polygon stroke='%23adadad' fill='%23ffffff' stroke-width='6' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' points='  82.626,50 17.374,87.674 17.374,12.326 82.626,50 17.374,87.674 17.374,12.326 '/></svg>");
+    content: url("data:image/svg+xml;uff8,<svg aria-label='directory' class='octicon octicon-file-directory' viewBox='0 0 14 16' version='1.1' width='14' height='16' role='img'><path fill-rule='evenodd' d='M13 4H7V3c0-.66-.31-1-1-1H1c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V5c0-.55-.45-1-1-1zM6 4H1V3h5v1z'></path></svg>");
     display: inline-block;
     height: 13px;
     width: 13px;
@@ -165,7 +182,7 @@
 }
 
 .tree-view_arrow:after {
-    content: url('data:image/svg+xml;uff8,<svg xmlns="http://www.w3.org/2000/svg" class="octicon octicon-file-directory" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill="%238197B0" fill-rule="evenodd" d="M13 4H7V3c0-.66-.31-1-1-1H1c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V5c0-.55-.45-1-1-1zM6 4H1V3h5v1z"></path></svg>');
+    content: url('data:image/svg+xml;uff8,<svg xmlns="http://www.w3.org/2000/svg" class="octicon octicon-file-directory" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill="%238197B099" fill-rule="evenodd" d="M13 4H7V3c0-.66-.31-1-1-1H1c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V5c0-.55-.45-1-1-1zM6 4H1V3h5v1z"></path></svg>');
     height: 17px;
     width: 17px;
     display: inline-block;
@@ -195,7 +212,8 @@
 }
 
 .github-pr-file.github-pr-file-highlight {
-    background: #ebebeb;
+    background: #ebebebaa;
+    border-radius: 2px;
 }
 
 .github-pr-file.github-pr-file-deleted {
@@ -207,7 +225,8 @@
 }
 
 .github-pr-file > span.changes > .number {
-  color: #888888;
+  color: #888888cc;
+  font-size: 10px;
   margin-left: 8px;
   margin-right: 4px;
 }
